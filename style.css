@@ -46,11 +46,6 @@ button:active {
     transform: translate(-50%, -50%) scale(0.9);
 }
 
-button.pause::after {
-    content: "⏸"; /* Pause */
-    color: #7c3413;
-}
-
 /* Eliminar cualquier texto dentro del botón */
 button::after {
     content: "";
