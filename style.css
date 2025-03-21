@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+}
+
+.container {
+    position: relative;
+    width: 90vw;
+    max-width: 600px; /* Para que no sea enorme en PC */
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilo del botón */
+button {
+    position: absolute;
+    top: 28.7%;
+    left: 36%;
+    transform: translate(-50%, -50%);
+    width: 60px;  /* Más ancho */
+    height: 15px;  /* Más bajo */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    background: url("boton-textura.png") no-repeat center center; /* Imagen como textura */
+    background-size: cover; /* Ajusta la imagen al botón */
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 10;
+}
+
+/* Efecto de botón cuando se presiona */
+button:active {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+button.pause::after {
+    content: "⏸"; /* Pause */
+    color: #7c3413;
+}
+
+/* Eliminar cualquier texto dentro del botón */
+button::after {
+    content: "";
+}
+
+/* 📱 Estilos para móviles */
+@media (max-width: 600px) {
+    .turntable {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .disc {
+        width: 75%;
+        height: 75%;
+    }
+
+    .needle {
+        width: 4%;
+        height: 45%;
+        top: 20%;
+        left: 85%;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1rem; }
+}
