@@ -10,62 +10,80 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #1a1a1a;
+    flex-direction: column; /* Esto permite que los elementos se apilen verticalmente */
+    text-align: center; /* Asegura que todo el texto esté centrado */
 }
-
-/* Título principal */
-h1 {
-    font-family: 'Press Start 2P', cursive;
-    color: #fff;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-h3 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: bold; /* En negrita */
-    font-size: 1.8rem;
-    color: #FF0000; /* rojo */
-}
-/* Texto de instrucción */
-p {
-    font-weight: normal; /* Sin negrita */
-    font-size: 1rem; /* Más pequeño */
-    color: #fff;
-    white-space: nowrap; /* En una sola línea */
-}
-
 
 .container {
     position: relative;
-    width: 90vw;
-    max-width: 600px; /* Para que no sea enorme en PC */
+    display: flex;
+    flex-direction: column; /* Coloca los elementos de manera vertical */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Alinea todo verticalmente en el centro */
 }
 
 video {
-    width: 100%;
-    height: auto;
+    width: 60vw; /* Ancho relativo al tamaño de la ventana */
+    height: auto; /* Mantiene la proporción del video */
     display: block;
+    margin-bottom: 2vh; /* Espacio debajo del video */
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    font-size: 5vw; /* Relativo al tamaño de la ventana */
+    margin-bottom: 2vh; /* Espacio debajo del título */
+    margin-top: 20vh;
+}
+
+h3 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-weight: bold;
+    font-size: 3.5vw; /* Relativo al tamaño de la ventana */
+    color: #FF0000; /* Rojo */
+    margin-bottom: 2vh; /* Espacio debajo del subtítulo */
+}
+
+h2 {
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: bold;
+    font-size: 3.5vw; /* Relativo al tamaño de la ventana */
+    color: white; /* Rojo */
+    margin-bottom: 2vh; /* Espacio debajo del subtítulo */
+}
+
+p {
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: normal;
+    font-size: 2.5vw; /* Relativo al tamaño de la ventana */
+    color: #fff;
+    margin-bottom: 2vh; /* Espacio debajo del párrafo */
+    text-align: -webkit-centerjustify;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 /* Estilo del botón */
 button {
     position: absolute;
-    top: 28.7%;
-    left: 36%;
-    transform: translate(-50%, -50%);
-    width: 60px;  /* Más ancho */
-    height: 15px;  /* Más bajo */
+    top: 44.6%;
+    left: 42%; /* Centrado horizontal */
+    transform: translateX(-50%);
+    width: 8vw;  /* Relativo al ancho de la ventana */
+    height: 2.5vh;  /* Relativo al alto de la ventana */
     border: none;
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 5px;
     cursor: pointer;
     background: url("boton-textura.png") no-repeat center center; /* Imagen como textura */
-    background-size: cover; /* Ajusta la imagen al botón */
+    background-size: cover;
     transition: background-color 0.3s, transform 0.2s;
     z-index: 10;
 }
 
 /* Efecto de botón cuando se presiona */
 button:active {
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translateX(-50%) scale(0.9);
 }
 
 /* Eliminar cualquier texto dentro del botón */
@@ -92,6 +110,7 @@ button::after {
         left: 85%;
     }
 
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1rem; }
+    h1 { font-size: 6vw; } /* Relativo al ancho de la ventana */
+    h3 { font-size: 4.5vw; }
+    p { font-size: 4vw; }
 }
