@@ -1,3 +1,4 @@
+/* Reset y configuración global */
 * {
     margin: 0;
     padding: 0;
@@ -10,103 +11,89 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #1a1a1a;
-    flex-direction: column; /* Esto permite que los elementos se apilen verticalmente */
-    text-align: center; /* Asegura que todo el texto esté centrado */
+    flex-direction: column;
+    text-align: center;
 }
 
 h1 {
     font-family: 'Press Start 2P', cursive;
     color: #fff;
-    font-size: 5px; /* Relativo al tamaño de la ventana */
+    font-size: 5vw;
     margin-top: 10vh;
 }
 
-video {
-    position: relative
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
-    justify-content: center;
-    width: 300px; /* Ancho relativo al tamaño de la ventana */
-    height: 168vw; /* Mantiene la proporción del video */
-    margin-top: -10vh;
+/* Contenedor del video para posicionar el botón */
+.video-container {
+    position: relative;
+    width: 80vw;
+    max-width: 300px;
 }
 
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 h3 {
     font-family: 'Press Start 2P', sans-serif;
     font-weight: bold;
-    font-size: 3.5vw; /* Relativo al tamaño de la ventana */
-    color: #FF0000; /* Rojo */
-    margin-bottom: 2vh; /* Espacio debajo del subtítulo */
-    margin-left:2vh;
-    margin-right:2vh;
+    font-size: 3.5vw;
+    color: #FF0000;
+    margin-bottom: 2vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
     margin-top: -10vh;
 }
 
 h2 {
     font-family: 'Roboto Slab', sans-serif;
     font-weight: bold;
-    font-size: 3.5vw; /* Relativo al tamaño de la ventana */
-    color: white; /* Rojo */
-    margin-bottom: 2vh; /* Espacio debajo del subtítulo */
+    font-size: 3.5vw;
+    color: white;
+    margin-bottom: 2vh;
 }
 
 p {
     font-family: 'Roboto Slab', sans-serif;
     font-weight: normal;
-    font-size: 2.5vw; /* Relativo al tamaño de la ventana */
+    font-size: 2.5vw;
     color: #fff;
-    margin-bottom: 2vh; /* Espacio debajo del párrafo */
+    margin-bottom: 2vh;
     text-align: justify;
     margin-left: 15%;
     margin-right: 15%;
 }
 
-/* Estilo del botón */
-button {
+/* Estilo del botón dentro del video */
+.play-button {
     position: absolute;
-    top: 35%;
-    left: 39.5%; /* Centrado horizontal */
-    transform: translateX(-50%);
-    width: 8vw;  /* Relativo al ancho de la ventana */
-    height: 2.5vh;  /* Relativo al alto de la ventana */
+    top: 50%; /* Ajusta la posición vertical relativa al video */
+    left: 50%; /* Centra el botón */
+    transform: translate(-50%, -50%);
+    width: 15%; /* Ajusta el tamaño relativo al video */
+    height: 15%;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background: url("boton-textura.png") no-repeat center center; /* Imagen como textura */
+    background: url("boton-textura.png") no-repeat center center;
     background-size: cover;
-    transition: background-color 0.3s, transform 0.2s;
-    z-index: 10;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
 /* Efecto de botón cuando se presiona */
-button:active {
-    transform: translateX(-50%) scale(0.9);
-}
-
-/* Eliminar cualquier texto dentro del botón */
-button::after {
-    content: "";
+.play-button:active {
+    transform: translate(-50%, -50%) scale(0.9);
 }
 
 /* 📱 Estilos para móviles */
 @media (max-width: 600px) {
-    .video {
+    .video-container {
         width: 80vw;
         height: auto;
-        margin-top: -5vh;
     }
 
-    .button {
-        top: 35%;
-        left: 39.5%;
-    }
-
-    h1 { font-size: 6vw; } /* Relativo al ancho de la ventana */
+    h1 { font-size: 6vw; }
     h3 { font-size: 4.5vw; }
     h2 { font-size: 4.5vw; }
     p { font-size: 4vw; }
 }
-
