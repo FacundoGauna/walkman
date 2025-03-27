@@ -14,28 +14,26 @@ body {
     text-align: center; /* Asegura que todo el texto esté centrado */
 }
 
-.container {
-    position: relative;
-    display: flex;
-    flex-direction: column; /* Coloca los elementos de manera vertical */
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Alinea todo verticalmente en el centro */
-}
-
-video {
-    width: 60vw; /* Ancho relativo al tamaño de la ventana */
-    height: auto; /* Mantiene la proporción del video */
-    display: block;
-    margin-bottom: 2vh; /* Espacio debajo del video */
-}
-
 h1 {
     font-family: 'Press Start 2P', cursive;
     color: #fff;
-    font-size: 5vw; /* Relativo al tamaño de la ventana */
-    margin-bottom: 2vh; /* Espacio debajo del título */
+    font-size: 5px; /* Relativo al tamaño de la ventana */
+    margin-bottom: 4vh; /* Espacio debajo del título */
     margin-top: 20vh;
 }
+
+video {
+    position: relative
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    width: 300px; /* Ancho relativo al tamaño de la ventana */
+    height: 168vw; /* Mantiene la proporción del video */
+    margin-bottom: 5px; /* Espacio debajo del video */
+}
+
 
 h3 {
     font-family: 'Press Start 2P', sans-serif;
@@ -43,6 +41,8 @@ h3 {
     font-size: 3.5vw; /* Relativo al tamaño de la ventana */
     color: #FF0000; /* Rojo */
     margin-bottom: 2vh; /* Espacio debajo del subtítulo */
+    margin-left:2vh;
+    margin-right:2vh;
 }
 
 h2 {
@@ -67,8 +67,8 @@ p {
 /* Estilo del botón */
 button {
     position: absolute;
-    top: 44.6%;
-    left: 42%; /* Centrado horizontal */
+    top: 40%;
+    left: 39.5%; /* Centrado horizontal */
     transform: translateX(-50%);
     width: 8vw;  /* Relativo al ancho de la ventana */
     height: 2.5vh;  /* Relativo al alto de la ventana */
