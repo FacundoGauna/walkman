@@ -27,12 +27,17 @@ h1 {
     position: relative;
     width: 80vw;
     max-width: 300px;
+    justify-content: center;
+    justify-self: center;
+    align-self:center;
 }
 
 video {
     width: 100%;
     height: auto;
     display: block;
+    margin-bottom: 15vh;
+    margin-top: 3vh;
 }
 
 h3 {
@@ -68,9 +73,9 @@ p {
 /* Estilo del botón dentro del video */
 .play-button {
     position: absolute;
-    top: 50%; /* Ajusta la posición vertical relativa al video */
-    left: 50%; /* Centra el botón */
-    transform: translate(-50%, -50%);
+    top: 10%; /* Ajusta la posición vertical relativa al video */
+    left: 10%; /* Centra el botón */
+    transform: translate(-50%);
     width: 15%; /* Ajusta el tamaño relativo al video */
     height: 15%;
     border: none;
@@ -78,6 +83,7 @@ p {
     background-size: cover;
     cursor: pointer;
     transition: transform 0.2s;
+    z-index: 10;
 }
 
 /* Efecto de botón cuando se presiona */
