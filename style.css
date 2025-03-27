@@ -67,7 +67,7 @@ p {
 /* Estilo del botón */
 button {
     position: absolute;
-    top: 33%;
+    top: 35%;
     left: 39.5%; /* Centrado horizontal */
     transform: translateX(-50%);
     width: 8vw;  /* Relativo al ancho de la ventana */
