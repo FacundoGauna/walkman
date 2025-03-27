@@ -18,8 +18,7 @@ h1 {
     font-family: 'Press Start 2P', cursive;
     color: #fff;
     font-size: 5px; /* Relativo al tamaño de la ventana */
-    margin-bottom: 4vh; /* Espacio debajo del título */
-    margin-top: 20vh;
+    margin-top: 10vh;
 }
 
 video {
@@ -31,7 +30,7 @@ video {
     justify-content: center;
     width: 300px; /* Ancho relativo al tamaño de la ventana */
     height: 168vw; /* Mantiene la proporción del video */
-    margin-bottom: 5px; /* Espacio debajo del video */
+    margin-top: -10vh;
 }
 
 
@@ -43,6 +42,7 @@ h3 {
     margin-bottom: 2vh; /* Espacio debajo del subtítulo */
     margin-left:2vh;
     margin-right:2vh;
+    margin-top: -10vh;
 }
 
 h2 {
@@ -59,7 +59,7 @@ p {
     font-size: 2.5vw; /* Relativo al tamaño de la ventana */
     color: #fff;
     margin-bottom: 2vh; /* Espacio debajo del párrafo */
-    text-align: -webkit-centerjustify;
+    text-align: justify;
     margin-left: 15%;
     margin-right: 15%;
 }
@@ -67,7 +67,7 @@ p {
 /* Estilo del botón */
 button {
     position: absolute;
-    top: 40%;
+    top: 33%;
     left: 39.5%; /* Centrado horizontal */
     transform: translateX(-50%);
     width: 8vw;  /* Relativo al ancho de la ventana */
@@ -100,7 +100,7 @@ button::after {
     }
 
     .button {
-        top: 40%;
+        top: 33%;
         left: 39.5%;
     }
 
